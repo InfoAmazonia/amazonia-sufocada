@@ -1,0 +1,8 @@
+# IMPORTANTE: o servidor está configurado para funcionar no horário universal (UTC)
+
+# Todos os dias, atualiza os dados de queimadas e tuíta o fio de 24h 
+0 21 * * * bash /home/amazonia-sufocada/update_data.sh >> /home/amazonia-sufocada/cronlog-update-data.txt 2>&1
+
+# Na manhã de segunda, tuíta o fio com o agregado semanal 
+30 13 * * 1 bash /home/amazonia-sufocada/tweet_7d.sh >> /home/amazonia-sufocada/cronlog-tweet-7d.txt 2>&1
+               

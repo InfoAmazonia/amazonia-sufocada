@@ -1,0 +1,11 @@
+services:
+  amazonia-sufocada:
+    build:
+      context: .
+      dockerfile: ./compose/local/Dockerfile
+    container_name: amazonia-sufocada
+    environment: 
+      MAPBOX_USER: infoamazonia
+    volumes:
+      - ./compose/local/entrypoint.sh:/entrypoint.sh      
+      - ./src:/home/amazonia-sufocada
