@@ -29,10 +29,7 @@ Para reproduzir o projeto na íntegra, você vai precisar de contas e acesso às
 	3. Já dentro do ambiente recém criado, instale a interface de linha de comando do Mapbox. Instruções [aqui](https://github.com/mapbox/mapbox-cli-py).
 	4. Instale o tippecanoe, também do Mapbox, [conforme as instruções](https://github.com/mapbox/tippecanoe).
 	5. Modifique os arquivos `setup.sh` e `update_data.sh` com os caminhos para sua instalação local do Anaconda e para o diretório em que você clonou o projeto.
-	6. No diretório code, crie arquivos chamados `twitter_credentials.py` e `mapbox_credentials.py` com as suas chaves de acesso às APIs dos respectivos serviços.
-		- Para o Twitter, defina as seguintes variáveis com as respectivas chaves: `consumer_key`, `consumer_secret`, `bearer_token`, `access_token`, `access_token_secret`
-		- Para o Mapbox, defina uma variável `token` com a sua credencial para uso das APIs.
-	7. No arquivo `prepare_tilesets.py`, substitua a variável `USERNAME` com o nome de usuário de sua conta no Mapbox.
+	6. Altere as variaveis de ambiente definidas no docker-compose.yml utilizando suas credenciais do mapbox e twitter
 
 ### Executando o código
 
