@@ -152,7 +152,6 @@ dependencies:
   - ptyprocess=0.6.0=py_1001
   - pyarrow=1.0.1=py38h1234567_1_cpu
   - pycparser=2.20=pyh9f0ad1d_2
-  - pygeos=0.7.1=py38hd168ffb_0
   - pygments=2.6.1=py_0
   - pyopenssl=19.1.0=py_1
   - pyparsing=2.4.7=pyh9f0ad1d_0
@@ -232,5 +231,8 @@ dependencies:
     - tweepy==3.9.0
     - uritemplate==3.0.1
     - uuid==1.30
+    - geopandas==0.9.0
+    - pyarrow==4.0.0
+    - pygeos==0.8
 prefix: /root/anaconda3/envs/amazonia_sufocada
 
