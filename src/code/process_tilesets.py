@@ -32,11 +32,11 @@ PROJECT_ROOT = dirname(abspath(dirname(__file__)))
 
 CONDA_PREFIX = os.environ["CONDA_PREFIX"] # path to the environment-specific utilities
 
-TIPPECANOE_PATH = abspath("/home/tippecanoe/tippecanoe")
+TIPPECANOE_PATH = abspath("/opt/conda/bin/tippecanoe")
 
 TOKEN = mapbox_credentials.token
 
-USERNAME = "infoamazonia"
+USERNAME = os.environ["MAPBOX_USER"]
 
 SOURCES = [
         ("amzsufocada-24h", f"{PROJECT_ROOT}/output/jsons/tilesets/24h.json"),
