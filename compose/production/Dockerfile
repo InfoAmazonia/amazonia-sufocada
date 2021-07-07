@@ -10,6 +10,4 @@ RUN conda env create --file /home/amazonia-sufocada/environment.yml
 
 RUN conda install -c conda-forge tippecanoe
 
-COPY /compose/local/entrypoint.sh /entrypoint.sh
-
 RUN /home/amazonia-sufocada/setup.sh
