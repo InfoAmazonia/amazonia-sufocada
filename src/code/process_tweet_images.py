@@ -2,7 +2,6 @@ from datetime import datetime
 import pandas as pd
 import geopandas as gpd
 import json
-import mapbox_credentials
 import matplotlib.pyplot as plt
 import os
 from pprint import pprint
@@ -38,8 +37,10 @@ GRID = gpd.read_feather(f"{PROJECT_ROOT}/output/feathers/land_info/grid_20km.fea
 ### Token de acesso ###
 #######################
 
-TOKEN = mapbox_credentials.token
-USERNAME = "infoamazonia"
+TOKEN = os.environ["MAPBOX_TOKEN"]
+
+USERNAME = os.environ["MAPBOX_USER"]
+
 
 ###############
 ### Helpers ###

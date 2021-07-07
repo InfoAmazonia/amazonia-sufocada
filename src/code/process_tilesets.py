@@ -13,7 +13,6 @@ https://github.com/mapbox/tilesets-cli/
 https://github.com/RodrigoMenegat/amazonia-sufocada
 '''
 
-import mapbox_credentials
 import json
 import os
 import shutil
@@ -34,7 +33,7 @@ CONDA_PREFIX = os.environ["CONDA_PREFIX"] # path to the environment-specific uti
 
 TIPPECANOE_PATH = abspath("/opt/conda/bin/tippecanoe")
 
-TOKEN = mapbox_credentials.token
+TOKEN = os.environ["MAPBOX_TOKEN"]
 
 USERNAME = os.environ["MAPBOX_USER"]
 
