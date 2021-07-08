@@ -11,8 +11,8 @@ import os
 
 
 # Inicia uma sessão
-AUTH = tweepy.OAuthHandler(os.environ["CONSUMER_KEY"], os.eniron['CONSUMER_SECRET'])
-AUTH.set_access_token(os.eniron['ACCESS_TOKEN'], os.eniron['ACCESS_TOKEN_SECRET'])
+AUTH = tweepy.OAuthHandler(os.environ["CONSUMER_KEY"], os.environ['CONSUMER_SECRET'])
+AUTH.set_access_token(os.environ['ACCESS_TOKEN'], os.environ['ACCESS_TOKEN_SECRET'])
 
 API = tweepy.API(AUTH)
 
