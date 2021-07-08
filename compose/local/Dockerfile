@@ -22,3 +22,4 @@ RUN apt-get -y install cron
 ADD compose/tweet-cronjob /etc/cron.d/tweet-cronjob
 RUN chmod 0644 /etc/cron.d/tweet-cronjob
 RUN crontab /etc/cron.d/tweet-cronjob 
+CMD cron
