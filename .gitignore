@@ -2,4 +2,5 @@ src/code/twitter_credentials.py
 src/code/mapbox_credentials.py
 *_credentials
 src/input
+src/output
 *__pycache__
