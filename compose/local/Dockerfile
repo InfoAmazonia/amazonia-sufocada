@@ -24,6 +24,6 @@ RUN chmod 0644 /etc/cron.d/tweet-cronjob
 RUN crontab /etc/cron.d/tweet-cronjob 
 COPY compose/entrypoint.sh /
 COPY compose/set-vars.sh /
-RUN chmod + x /set-vars.sh
+RUN chmod +x /set-vars.sh
 ENTRYPOINT ["/entrypoint.sh"]
 CMD cron && tail -f /var/log/cron.log
