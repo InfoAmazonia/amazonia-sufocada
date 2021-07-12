@@ -12,8 +12,8 @@ import credentials
 
 
 # Inicia uma sessão
-AUTH = tweepy.OAuthHandler(credentials.consumer_key	, credentials.consumer_secret'])
-AUTH.set_access_token(credentials.access_token, credentials.access_token_secret'])
+AUTH = tweepy.OAuthHandler(credentials.consumer_key	, credentials.consumer_secret)
+AUTH.set_access_token(credentials.access_token, credentials.access_token_secret)
 
 API = tweepy.API(AUTH)
 
