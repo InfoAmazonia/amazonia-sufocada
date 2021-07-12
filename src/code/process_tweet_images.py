@@ -9,7 +9,7 @@ import random
 import re
 import requests
 import shutil
-
+import credentials
 
 ###########################
 ### Rename os functions ###
@@ -37,9 +37,9 @@ GRID = gpd.read_feather(f"{PROJECT_ROOT}/output/feathers/land_info/grid_20km.fea
 ### Token de acesso ###
 #######################
 
-TOKEN = os.environ["MAPBOX_TOKEN"]
+TOKEN = credentials.mapbox_token
 
-USERNAME = os.environ["MAPBOX_USER"]
+USERNAME = credentials.mapbox_user
 
 
 ###############

@@ -8,11 +8,12 @@ import time
 import tweepy
 import sys
 import os
+import credentials
 
 
 # Inicia uma sessão
-AUTH = tweepy.OAuthHandler(os.environ["CONSUMER_KEY"], os.environ['CONSUMER_SECRET'])
-AUTH.set_access_token(os.environ['ACCESS_TOKEN'], os.environ['ACCESS_TOKEN_SECRET'])
+AUTH = tweepy.OAuthHandler(credentials.consumer_key	, credentials.consumer_secret'])
+AUTH.set_access_token(credentials.access_token, credentials.access_token_secret'])
 
 API = tweepy.API(AUTH)
 

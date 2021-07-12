@@ -18,6 +18,7 @@ import os
 import shutil
 import subprocess
 import time
+import credentials
 
 
 abspath = os.path.abspath
@@ -33,9 +34,9 @@ CONDA_PREFIX = os.environ["CONDA_PREFIX"] # path to the environment-specific uti
 
 TIPPECANOE_PATH = abspath("/opt/conda/bin/tippecanoe")
 
-TOKEN = os.environ["MAPBOX_TOKEN"]
+TOKEN = credentials.mapbox_token
 
-USERNAME = os.environ["MAPBOX_USER"]
+USERNAME = credentials.mapbox_user
 
 SOURCES = [
         ("amzsufocada-24h", f"{PROJECT_ROOT}/output/jsons/tilesets/24h.json"),
