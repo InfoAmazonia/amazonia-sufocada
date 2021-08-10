@@ -5,3 +5,4 @@ src/input
 src/output*
 *__pycache__
 src/code/credentials.py
+src/cronlog-update-data.txt
