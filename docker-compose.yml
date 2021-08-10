@@ -1,0 +1,18 @@
+services:
+  amazonia-sufocada:
+    build:
+      context: .
+      dockerfile: ./compose/local/Dockerfile
+    container_name: amazonia-sufocada
+    environment: 
+      MAPBOX_USER: MAPBOX_USER
+      MAPBOX_TOKEN: MAPBOX_TOKEN
+      CONSUMER_KEY: CONSUMER_KEY
+      CONSUMER_SECRET: CONSUMER_SECRET
+      BEARER_TOKEN: BEARER_TOKEN
+      ACCESS_TOKEN: ACCESS_TOKEN
+      ACCESS_TOKEN_SECRET: ACCESS_TOKEN_SECRET
+    volumes:
+      - ./compose/local/entrypoint.sh:/entrypoint.sh      
+      - ./src:/home/amazonia-sufocada
+    command: tail -f /var/log/cron.log
