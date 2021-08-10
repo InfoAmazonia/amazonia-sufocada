@@ -15,3 +15,4 @@ services:
     volumes:
       - ./compose/local/entrypoint.sh:/entrypoint.sh      
       - ./src:/home/amazonia-sufocada
+    command: tail -f /var/log/cron.log

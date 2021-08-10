@@ -287,6 +287,7 @@ def featherize_sources():
     dtype = {"acq_time": str, "acq_date": str}
 
     archive = pd.read_csv(f"{in_path}/FIRMS_VIIRS_2020/fire_archive.csv", dtype=dtype)
+    archive.daynight = archive.daynight.astype(str)
     archive.to_feather(f"{out_path}/fire_archive.feather")
 
     nrt = pd.read_csv(f"{in_path}/FIRMS_VIIRS_2020/fire_nrt.csv", dtype=dtype)
