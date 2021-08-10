@@ -1,4 +1,4 @@
-source /root/anaconda3/etc/profile.d/conda.sh &&
+source /opt/conda/etc/profile.d/conda.sh &&
 conda activate amazonia_sufocada &&
 cd /home/amazonia-sufocada/code &&
 python prepare.py &&
@@ -10,4 +10,3 @@ python process_tweet_images.py &&
 python process_tweet_content.py &&
 cd ..
 cp -r -f -T /home/amazonia-sufocada/output /home/amazonia-sufocada-static-output
-
