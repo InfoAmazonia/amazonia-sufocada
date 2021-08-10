@@ -6,12 +6,14 @@ para fazer uma thread no Twitter.
 import json
 import time
 import tweepy
-import twitter_credentials
 import sys
+import os
+import credentials
+
 
 # Inicia uma sessão
-AUTH = tweepy.OAuthHandler(twitter_credentials.consumer_key, twitter_credentials.consumer_secret)
-AUTH.set_access_token(twitter_credentials.access_token, twitter_credentials.access_token_secret)
+AUTH = tweepy.OAuthHandler(credentials.consumer_key	, credentials.consumer_secret)
+AUTH.set_access_token(credentials.access_token, credentials.access_token_secret)
 
 API = tweepy.API(AUTH)
 

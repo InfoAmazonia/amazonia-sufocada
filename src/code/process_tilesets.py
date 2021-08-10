@@ -13,12 +13,12 @@ https://github.com/mapbox/tilesets-cli/
 https://github.com/RodrigoMenegat/amazonia-sufocada
 '''
 
-import mapbox_credentials
 import json
 import os
 import shutil
 import subprocess
 import time
+import credentials
 
 
 abspath = os.path.abspath
@@ -32,11 +32,11 @@ PROJECT_ROOT = dirname(abspath(dirname(__file__)))
 
 CONDA_PREFIX = os.environ["CONDA_PREFIX"] # path to the environment-specific utilities
 
-TIPPECANOE_PATH = abspath("/home/tippecanoe/tippecanoe")
+TIPPECANOE_PATH = abspath("/opt/conda/bin/tippecanoe")
 
-TOKEN = mapbox_credentials.token
+TOKEN = credentials.mapbox_token
 
-USERNAME = "infoamazonia"
+USERNAME = credentials.mapbox_user
 
 SOURCES = [
         ("amzsufocada-24h", f"{PROJECT_ROOT}/output/jsons/tilesets/24h.json"),
